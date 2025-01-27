@@ -80,7 +80,6 @@ modules:
       - io.missioncenter.MissionCenter
       - org.gtk.Gtk3theme.adw-gtk3/x86_64/3.22
       - org.gtk.Gtk3theme.adw-gtk3-dark/x86_64/3.22
-    remove:
-        - org.gnome.eog  - type: justfiles
+  - type: justfiles
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
