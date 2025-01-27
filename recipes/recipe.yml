@@ -33,12 +33,16 @@ modules:
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
-      install:
-        - org.mozilla.firefox
-        - org.gnome.Loupe
-      remove:
-        - org.gnome.eog
-    user: {} # Also add Flathub user repo, but no user packages
+    install:
+      - com.spotify.Client
+      - io.github.zen_browser.zen
+      - io.github.dvlv.boxbuddyrs
+      - io.missioncenter.MissionCenter
+      - org.gtk.Gtk3theme.adw-gtk3/x86_64/3.22
+      - org.gtk.Gtk3theme.adw-gtk3-dark/x86_64/3.22
+    remove:
+        - org.gnome.eog  - type: justfiles
+    validate: true
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
