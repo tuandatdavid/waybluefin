@@ -1,8 +1,7 @@
 # waybluefin &nbsp; [![bluebuild build badge](https://github.com/tuandatdavid/waybluefin/actions/workflows/build.yml/badge.svg)](https://github.com/tuandatdavid/waybluefin/actions/workflows/build.yml)
 
 __Wayblue with a bluefin touch__
-After setup, it is recommended you update this README to describe your custom image.
-
+my image to jakoolits dotfiles. Copied files from theirs dotfiles and bluefin repo
 ## Installation
 
 > [!WARNING]  
