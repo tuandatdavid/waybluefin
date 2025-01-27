@@ -1,7 +1,6 @@
 # waybluefin &nbsp; [![bluebuild build badge](https://github.com/tuandatdavid/waybluefin/actions/workflows/build.yml/badge.svg)](https://github.com/tuandatdavid/waybluefin/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
+__Wayblue with a bluefin touch__
 After setup, it is recommended you update this README to describe your custom image.
 
 ## Installation
