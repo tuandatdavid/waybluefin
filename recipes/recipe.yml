@@ -20,6 +20,9 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-41/solopasha-hyprland-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-41/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/errornointernet/packages/repo/fedora-41/errornointernet-packages-fedora-%OS_VERSION%.repo
     install:
       - micro
       - starship
@@ -56,6 +59,12 @@ modules:
       - xdg-user-dirs
       - xdg-utils
       - yad
+      - cliphist
+      - nwg-look
+      - SwayNotificationCenter
+      - pamixer
+      - swww
+      - wallust 
     remove:
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
