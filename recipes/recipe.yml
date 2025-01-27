@@ -78,8 +78,6 @@ modules:
       - io.github.zen_browser.zen
       - io.github.dvlv.boxbuddyrs
       - io.missioncenter.MissionCenter
-      - org.gtk.Gtk3theme.adw-gtk3
-      - org.gtk.Gtk3theme.adw-gtk3-dark
   - type: justfiles
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
