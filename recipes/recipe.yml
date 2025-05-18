@@ -73,6 +73,13 @@ modules:
       - thunar
       - thunar-archive-plugin 
       - thunar-volman
+  - type: default-flatpaks
+    system:
+      install:
+        - net.nokyan.Resources # this Flatpak is appended to the install list
+        - app.zen_browser.zen # this one too
+        - io.anytype.anytype # this one too
+        - com.spotify.Client # gotta somehow figure out spicetify
   - type: justfiles
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
