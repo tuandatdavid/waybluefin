@@ -74,6 +74,9 @@ modules:
       - thunar-archive-plugin 
       - thunar-volman
   - type: default-flatpaks
+    repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    repo-name: flathub
+    repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
     system:
       install:
         - net.nokyan.Resources # this Flatpak is appended to the install list
