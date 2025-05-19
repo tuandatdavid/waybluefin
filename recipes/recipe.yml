@@ -80,7 +80,7 @@ modules:
         - app.zen_browser.zen # this one too
         - io.anytype.anytype # this one too
         - com.spotify.Client # gotta somehow figure out spicetify
-        - io.github.celluloid_player # look videos!!
+        - io.github.celluloid_player.Celluloid # look videos!!
         - com.unicornsonlsd.finamp
   - type: systemd
     system:  
