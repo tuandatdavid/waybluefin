@@ -450,10 +450,6 @@ install-spicetify:
 
     pinkEcho "Let's get started!"
 
-    # 1. Install curl
-    pinkEcho "Installing curl..."
-    sudo pacman -S curl --noconfirm
-
     # 2. Install Spicetify
     pinkEcho "Installing Spicetify..."
     curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
