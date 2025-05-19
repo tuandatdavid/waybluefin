@@ -1,0 +1,6 @@
+[Unit]
+Description=fix permissions on startup of spotify
+[Service]
+ExecStart=chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64
+[Install]
+WantedBy=multi-user.target
