@@ -65,7 +65,8 @@ modules:
       - wallust 
       - waydroid
       - nautilus
-      - gnome-settings
+      - gnome-control-center
+      - gnome-settings-daemon
     remove:
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
