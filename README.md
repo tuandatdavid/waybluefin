@@ -2,6 +2,11 @@
 
 __Wayblue with a bluefin touch__
 my image to jakoolits dotfiles. Copied files from theirs dotfiles and bluefin repo
+## ToDo
+
+- move this systemd service with autochmod spotify on startup for spicetify
+- add some basic flatpaks
+- some justfiles
 ## Installation
 
 > [!WARNING]  
