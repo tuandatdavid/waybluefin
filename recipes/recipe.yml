@@ -82,6 +82,7 @@ modules:
         - io.github.celluloid_player # look videos!!
         - com.unicornsonlsd.finamp
   - type: systemd
+    system:  
       enabled:
         - spotpermfix.service
         - podman.socket
