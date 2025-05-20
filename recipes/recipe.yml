@@ -78,7 +78,7 @@ modules:
         packages:
           - hyprland
           - hyprutils
-- type: default-flatpaks
+  - type: default-flatpaks
     system:  
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
