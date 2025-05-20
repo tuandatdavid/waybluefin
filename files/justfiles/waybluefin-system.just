@@ -300,11 +300,11 @@ install-spicetify:
     pinkEcho "Granting permissions to Spicetify..."
     sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify
     sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
-
     # 10. Apply Spicetify 
     pinkEcho "Applying Spicetify..."
-    spicetify backup apply 
-
+    $HOME/.config/spicetify backup apply 
+    pinkEcho Adding spicetify to path!
+    echo  export PATH="$PATH:.$HOME/config/spicetify" >> $HOME/.bashrc
     pinkEcho "Done! Go forth and customize your Spotify experience!"   
 install-gtk-theme:
     cd /tmp
@@ -312,4 +312,3 @@ install-gtk-theme:
     cd GTK-themes-icons
     chmod +x auto-extract.sh
     ./auto-extract.sh
-    
