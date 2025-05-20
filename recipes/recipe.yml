@@ -24,10 +24,16 @@ modules:
       copr:
         - solopasha/hyprland
     replace:
-      - from-repo:  copr:copr.fedorainfracloud.org:solopasha:hyprland
+      - from-repo:  
         allow-erasing: true
         packages:
           - hyprland
+      packages:
+    install:
+      - libspng
+      packages:
+        - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
+          packages:
           - hyprutils
   - type: rpm-ostree
     repos:
