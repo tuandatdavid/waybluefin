@@ -66,6 +66,8 @@ modules:
       - waydroid
       - unzip
       - tar
+      - gnome-keyring
+      - libsecret
     remove:
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
