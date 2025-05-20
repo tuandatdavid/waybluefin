@@ -80,6 +80,8 @@ modules:
         - com.spotify.Client # gotta somehow figure out spicetify
         - io.github.celluloid_player.Celluloid # look videos!!
         - com.unicornsonlsd.finamp
+        - io.github.shiftey.Desktop
+        - com.vscodium.codium
   - type: systemd
     system:  
       enabled:
