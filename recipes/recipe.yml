@@ -18,10 +18,11 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
-    files:
-      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-42/solopasha-hyprland-fedora-42.repo
-    copr:
-      - solopasha/hyprland
+    repos:
+      files:
+        - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-42/solopasha-hyprland-fedora-42.repo
+      copr:
+        - solopasha/hyprland
     replace:
       - from-repo:  copr:copr.fedorainfracloud.org:solopasha:hyprland
         allow-erasing: true
