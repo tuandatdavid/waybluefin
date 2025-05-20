@@ -247,7 +247,7 @@ install-dots:
     fi
 install-spicetify:
     #!/bin/bash
-
+    cd /tmp
     # Spice Up Your Spotify: A Beginner's Guide to Installing Spicetify on Arch Linux (Flatpak Edition)
 
     # Function to print in purplish pink (custom color code)
