@@ -113,7 +113,6 @@ modules:
       enabled:
         - spotpermfix.service
         - podman.socket
-        - hyprsunset.service
   - type: justfiles
   - type: brew
     nofile-limits: true # increase nofile limits
