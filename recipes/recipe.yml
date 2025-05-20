@@ -28,7 +28,6 @@ modules:
         allow-erasing: true
         packages:
           - hyprland
-      packages:
     install:
       - libspng
       packages:
