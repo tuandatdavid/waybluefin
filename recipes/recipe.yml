@@ -19,7 +19,8 @@ modules:
 
   - type: dnf
     install:
-      - libspng
+      packages:
+        - libspng
   - type: dnf
     repos:
       files:
@@ -27,7 +28,7 @@ modules:
       copr:
         - solopasha/hyprland
     replace:
-      - from-repo:  
+      - from-repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
         allow-erasing: true
         packages:
           - hyprland
