@@ -37,6 +37,7 @@ modules:
         - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
           packages:
           - hyprutils
+          - hyprsunset
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-42/solopasha-hyprland-fedora-42.repo
@@ -112,6 +113,7 @@ modules:
       enabled:
         - spotpermfix.service
         - podman.socket
+        - hyprsunset.service
   - type: justfiles
   - type: brew
     nofile-limits: true # increase nofile limits
