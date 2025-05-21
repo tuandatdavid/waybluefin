@@ -108,6 +108,11 @@ modules:
         - com.unicornsonlsd.finamp
         - io.github.shiftey.Desktop
         - com.vscodium.codium
+        - io.bassi.Amberol
+        - me.iepure.devtoolbox
+        - org.gnome.Dejadup
+        - org.gnome.gitlab.somas.Apostrophe
+        - org.gnome.TextEditor
   - type: systemd
     system:  
       enabled:
