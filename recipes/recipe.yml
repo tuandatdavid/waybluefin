@@ -114,6 +114,7 @@ modules:
         - org.gnome.DejaDup
         - org.gnome.gitlab.somas.Apostrophe
         - org.gnome.TextEditor
+        - com.nextcloud.desktopclient.nextcloud
   - type: systemd
     system:  
       enabled:
@@ -124,7 +125,7 @@ modules:
   - type: brew
     nofile-limits: true # increase nofile limits
     brew-analytics: false # disable telemetry
-  #- type: script
+  - type: script
     snippets:
      - "chmod +x /usr/libexec/ublue-bling"
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
