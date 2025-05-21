@@ -21,6 +21,7 @@ modules:
     install:
       packages:
         - libspng
+        - tailscale
   - type: dnf
     repos:
       files:
@@ -110,7 +111,7 @@ modules:
         - com.vscodium.codium
         - io.bassi.Amberol
         - me.iepure.devtoolbox
-        - org.gnome.Dejadup
+        - org.gnome.DejaDup
         - org.gnome.gitlab.somas.Apostrophe
         - org.gnome.TextEditor
   - type: systemd
@@ -118,6 +119,7 @@ modules:
       enabled:
         - spotpermfix.service
         - podman.socket
+        - tailscaled.service
   - type: justfiles
   - type: brew
     nofile-limits: true # increase nofile limits
