@@ -125,7 +125,7 @@ modules:
     nofile-limits: true # increase nofile limits
     brew-analytics: false # disable telemetry
   #- type: script
- #   snippets:
-  #   - "chmod +x ublue-bling"
+    snippets:
+     - "chmod +x /usr/libexec/ublue-bling"
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
