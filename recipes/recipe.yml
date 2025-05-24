@@ -121,6 +121,9 @@ modules:
         - spotpermfix.service
         - podman.socket
         - tailscaled.service
+  - type: akmods
+    install:
+      - framework-laptop
   - type: justfiles
   - type: brew
     nofile-limits: true # increase nofile limits
