@@ -122,7 +122,7 @@ modules:
         - podman.socket
         - tailscaled.service
   - type: akmods
-    base: main
+    base: common
     install:
       - framework-laptop
   - type: justfiles
