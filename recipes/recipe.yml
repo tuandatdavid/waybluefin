@@ -96,10 +96,12 @@ modules:
       - firefox
       - firefox-langpacks 
   - type: default-flatpaks
-    system:  
-      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      repo-name: flathub
-      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+    configurations:
+      scope: system  
+      repo:
+        url: https://dl.flathub.org/repo/flathub.flatpakrepo
+        name: flathub
+        title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - net.nokyan.Resources # this Flatpak is appended to the install list
         - app.zen_browser.zen # this one too
