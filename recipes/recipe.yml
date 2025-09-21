@@ -97,26 +97,27 @@ modules:
       - firefox-langpacks 
   - type: default-flatpaks
     configurations:
-      scope: system  
-      repo:
-        url: https://dl.flathub.org/repo/flathub.flatpakrepo
-        name: flathub
-        title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-      install:
-        - net.nokyan.Resources # this Flatpak is appended to the install list
-        - app.zen_browser.zen # this one too
-        - io.anytype.anytype # this one too
-        - com.spotify.Client # gotta somehow figure out spicetify
-        - io.github.celluloid_player.Celluloid # look videos!!
-        - com.unicornsonlsd.finamp
-        - io.github.shiftey.Desktop
-        - com.vscodium.codium
-        - io.bassi.Amberol
-        - me.iepure.devtoolbox
-        - org.gnome.DejaDup
-        - org.gnome.gitlab.somas.Apostrophe
-        - org.gnome.TextEditor
-        - com.nextcloud.desktopclient.nextcloud
+      - scope: system  
+      - notify: true
+        repo:
+          url: https://dl.flathub.org/repo/flathub.flatpakrepo
+          name: flathub
+          title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+        install:
+          - net.nokyan.Resources # this Flatpak is appended to the install list
+          - app.zen_browser.zen # this one too
+          - io.anytype.anytype # this one too
+          - com.spotify.Client # gotta somehow figure out spicetify
+          - io.github.celluloid_player.Celluloid # look videos!!
+          - com.unicornsonlsd.finamp
+          - io.github.shiftey.Desktop
+          - com.vscodium.codium
+          - io.bassi.Amberol
+          - me.iepure.devtoolbox
+          - org.gnome.DejaDup
+          - org.gnome.gitlab.somas.Apostrophe
+          - org.gnome.TextEditor
+          - com.nextcloud.desktopclient.nextcloud
   - type: systemd
     system:  
       enabled:
