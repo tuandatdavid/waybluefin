@@ -33,11 +33,11 @@ modules:
         allow-erasing: true
         packages:
           - hyprland
+          - hyprutils
     install:
       packages:
         - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
           packages:
-          - hyprutils
           - hyprsunset
   - type: rpm-ostree
     repos:
