@@ -24,8 +24,6 @@ modules:
         - tailscale
   - type: dnf
     repos:
-      files:
-        - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-42/solopasha-hyprland-fedora-43.repo
       copr:
         - solopasha/hyprland
     replace:
