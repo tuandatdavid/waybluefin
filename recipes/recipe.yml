@@ -26,6 +26,8 @@ modules:
     repos:
       copr:
         - solopasha/hyprland
+        - erikreider/SwayNotificationCenter
+        - errornointernet/packages
     replace:
       - from-repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
         allow-erasing: true
@@ -38,9 +40,6 @@ modules:
           packages:
           - hyprsunset
   - type: dnf
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/errornointernet/packages/repo/fedora-%OS_VERSION%/errornointernet-packages-fedora-%OS_VERSION%.repo
     install:
       packages:
         - hypridle
