@@ -28,6 +28,7 @@ modules:
         - solopasha/hyprland
         - erikreider/SwayNotificationCenter
         - errornointernet/packages
+        - rowanfr/fw-ectool
     replace:
       - from-repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
         allow-erasing: true
@@ -42,6 +43,7 @@ modules:
   - type: dnf
     install:
       packages:
+        - fw-ectool
         - hypridle
         - hyprlock
         - micro
