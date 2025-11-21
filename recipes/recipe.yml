@@ -31,6 +31,7 @@ modules:
         - erikreider/SwayNotificationCenter
         - errornointernet/packages
         - rowanfr/fw-ectool
+        - tofik/nwg-shell
     replace:
       - from-repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
         allow-erasing: true
@@ -84,6 +85,7 @@ modules:
         - yad
         - cliphist
         - nwg-look
+        - nwg-displays
         - SwayNotificationCenter
         - pamixer
         - swww
