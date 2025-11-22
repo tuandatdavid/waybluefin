@@ -47,6 +47,7 @@ modules:
   - type: dnf
     install:
       packages:
+        - bolt
         - bibata-cursor-themes
         - libvirt-daemon-config-network
         - libvirt-daemon-kvm
