@@ -32,6 +32,7 @@ modules:
         - errornointernet/packages
         - rowanfr/fw-ectool
         - tofik/nwg-shell
+        - peterwu/rendezvous
     replace:
       - from-repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
         allow-erasing: true
@@ -46,6 +47,7 @@ modules:
   - type: dnf
     install:
       packages:
+        - bibata-cursor-themes
         - libvirt-daemon-config-network
         - libvirt-daemon-kvm
         - qemu-kvm
