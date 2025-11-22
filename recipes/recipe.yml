@@ -46,6 +46,9 @@ modules:
   - type: dnf
     install:
       packages:
+        - libvirt-daemon-config-network
+        - libvirt-daemon-kvm
+        - qemu-kvm
         - virt-manager
         - fw-ectool
         - hypridle
