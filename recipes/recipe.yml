@@ -100,6 +100,7 @@ modules:
       packages:
         - firefox
         - firefox-langpacks 
+        - kwallet
   - type: default-flatpaks
     configurations:
       - scope: system  
