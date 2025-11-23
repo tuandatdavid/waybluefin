@@ -247,7 +247,7 @@ install-dots:
     fi
 install-spicetify:
     #!/bin/bash
-    cd /tmp
+    cd /var/tmp
     # Spice Up Your Spotify: A Beginner's Guide to Installing Spicetify on Arch Linux (Flatpak Edition)
 
     # Function to print in purplish pink (custom color code)
@@ -307,7 +307,7 @@ install-spicetify:
     echo  export PATH="$PATH:.$HOME/config/spicetify" >> $HOME/.bashrc
     pinkEcho "Done! Go forth and customize your Spotify experience!"   
 install-gtk-theme:
-    cd /tmp
+    cd /var/tmp
     git clone https://github.com/JaKooLit/GTK-themes-icons.git --depth 1
     cd GTK-themes-icons
     chmod +x auto-extract.sh
