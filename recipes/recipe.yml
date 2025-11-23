@@ -49,10 +49,6 @@ modules:
       packages:
         - bolt
         - bibata-cursor-themes
-        - libvirt-daemon-config-network
-        - libvirt-daemon-kvm
-        - qemu-kvm
-        - virt-manager
         - fw-ectool
         - hypridle
         - hyprlock
@@ -107,6 +103,10 @@ modules:
         - firefox
         - firefox-langpacks 
         - kwallet
+    group-install:
+      with-optional: true
+      packages:
+        - virtualization
   - type: default-flatpaks
     configurations:
       - scope: system  
@@ -136,6 +136,7 @@ modules:
         - spotpermfix.service
         - podman.socket
         - tailscaled.service
+        - libvirtd.service
   - type: justfiles
   - type: script
     snippets:
