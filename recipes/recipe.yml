@@ -46,6 +46,7 @@ modules:
           - hyprsunset
   - type: dnf
     install:
+      skip-unavailable: true
       packages:
         - gedit
         - bolt
