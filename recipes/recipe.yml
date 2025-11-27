@@ -99,7 +99,6 @@ modules:
         - tar
         - gnome-keyring
         - libsecret
-        - powerprofilesctl
     remove:
       packages:
         - firefox
