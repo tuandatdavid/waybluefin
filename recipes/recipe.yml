@@ -47,6 +47,7 @@ modules:
   - type: dnf
     install:
       packages:
+        - gedit
         - bolt
         - bibata-cursor-themes
         - fw-ectool
@@ -98,6 +99,7 @@ modules:
         - tar
         - gnome-keyring
         - libsecret
+        - powerprofilesctl
     remove:
       packages:
         - firefox
