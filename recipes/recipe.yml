@@ -58,7 +58,7 @@ modules:
         - gawk
         - git
         - grim
-        - hyprpolkitagent
+        - gnome-polkit
         - ImageMagick
         - inxi
         - jq
