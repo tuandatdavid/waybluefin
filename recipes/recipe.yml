@@ -129,8 +129,8 @@ modules:
           - me.iepure.devtoolbox
           - org.gnome.DejaDup
           - org.gnome.gitlab.somas.Apostrophe
-          - org.gnome.TextEditor
           - com.nextcloud.desktopclient.nextcloud
+          - org.easycoding.TunedSwitcher
   - type: systemd
     system:  
       enabled:
