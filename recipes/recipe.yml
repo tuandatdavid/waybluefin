@@ -99,6 +99,7 @@ modules:
         - tar
         - gnome-keyring
         - libsecret
+        - hyprland-qt-support
     remove:
       packages:
         - firefox
