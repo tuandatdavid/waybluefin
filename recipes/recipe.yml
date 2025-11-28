@@ -46,7 +46,7 @@ modules:
           - hyprsunset
   - type: dnf
     install:
-      skip-unavailable: true
+      skip-unavailable: false
       packages:
         - gedit
         - bolt
@@ -100,7 +100,7 @@ modules:
         - tar
         - gnome-keyring
         - libsecret
-        - hyprland-qt-support
+        - powertop
     remove:
       packages:
         - firefox
