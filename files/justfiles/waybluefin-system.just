@@ -246,8 +246,10 @@ install-dots:
     exit 1
     fi
 install-spicetify:
-    
+    #!/usr/bin/env bash
+    sh /usr/share/spicetify.sh
 install-gtk-theme:
+    #!/usr/bin/env bash
     cd /var/tmp
     git clone https://github.com/JaKooLit/GTK-themes-icons.git --depth 1
     cd GTK-themes-icons
