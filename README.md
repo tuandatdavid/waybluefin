@@ -2,6 +2,8 @@
 
 __Wayblue with a bluefin touch__
 my image to jakoolits dotfiles. Copied files from theirs dotfiles and bluefin repo
+## Credits:
+https://github.com/boudywho/easy-spicetify-arch/blob/main/spicetify.sh
 ## ToDo
 - add some basic flatpaks
 - some justfiles
