@@ -247,7 +247,7 @@ install-dots:
     fi
 install-spicetify:
     #!/usr/bin/env bash
-    sh /usr/share/spicetify.sh
+    sh /usr/share/ublue-os/spicetify.sh
 install-gtk-theme:
     #!/usr/bin/env bash
     cd /var/tmp
