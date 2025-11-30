@@ -39,6 +39,8 @@ modules:
         packages:
           - hyprland
           - hyprutils
+          - hypridle
+          - hyprlock
     install:
       packages:
         - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
@@ -52,7 +54,6 @@ modules:
         - bolt
         - bibata-cursor-themes
         - fw-ectool
-        - hypridle
         - hyprlock
         - micro
         - curl
@@ -101,6 +102,7 @@ modules:
         - gnome-keyring
         - libsecret
         - powertop
+        - tuned-utils
     remove:
       packages:
         - firefox
