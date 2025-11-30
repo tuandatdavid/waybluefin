@@ -54,7 +54,6 @@ modules:
         - bolt
         - bibata-cursor-themes
         - fw-ectool
-        - hyprlock
         - micro
         - curl
         - gawk
@@ -112,6 +111,7 @@ modules:
       with-optional: true
       packages:
         - virtualization
+        - printing
   - type: default-flatpaks
     configurations:
       - scope: system  
