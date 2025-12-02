@@ -33,6 +33,7 @@ modules:
         - rowanfr/fw-ectool
         - tofik/nwg-shell
         - peterwu/rendezvous
+        - deltragon/safeeyes
     replace:
       - from-repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
         allow-erasing: true
@@ -102,6 +103,7 @@ modules:
         - libsecret
         - powertop
         - tuned-utils
+        - safeeyes
     remove:
       packages:
         - firefox
