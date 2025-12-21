@@ -54,7 +54,7 @@ modules:
         - firefox
         - firefox-langpacks
         - kwallet
-        - @kde-desktop
+        - kde
     group-install:
       with-optional: true
       packages:
