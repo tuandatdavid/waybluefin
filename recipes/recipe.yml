@@ -26,25 +26,26 @@ modules:
     install:
       packages:
         - libspng
-  - type: dnf
-    repos:
-      copr:
-        - solopasha/hyprland
-        - erikreider/SwayNotificationCenter
-        - errornointernet/packages
-        - rowanfr/fw-ectool
-        - tofik/nwg-shell
-        - peterwu/rendezvous
-        - deltragon/safeeyes
-    install:
-      packages:
-        - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
-          packages:
-            - hyprsunset
-            - hyprland
-            - hyprutils
-            - hypridle
-            - hyprlock
+        - tomlplusplus
+#  - type: dnf
+#    repos:
+#      copr:
+#        - solopasha/hyprland
+#        - erikreider/SwayNotificationCenter
+#        - errornointernet/packages
+#        - rowanfr/fw-ectool
+#        - tofik/nwg-shell
+#        - peterwu/rendezvous
+#        - deltragon/safeeyes
+#    install:
+#      packages:
+#        - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
+#          packages:
+#            - hyprsunset
+#            - hyprland
+#            - hyprutils
+#            - hypridle
+#            - hyprlock
   - type: dnf
     install:
       packages:
