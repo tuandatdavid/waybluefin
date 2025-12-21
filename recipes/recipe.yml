@@ -26,7 +26,6 @@ modules:
     install:
       packages:
         - libspng
-        - tailscale
   - type: dnf
     repos:
       copr:
@@ -47,6 +46,9 @@ modules:
             - hypridle
             - hyprlock
   - type: dnf
+    install:
+      packages:
+        - cowsay
     remove:
       packages:
         - firefox
