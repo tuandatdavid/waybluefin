@@ -6,7 +6,7 @@ name: waybluefin
 description: Wayblue with a bluefin touch
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/wayblueorg/hyprland-gdm
+base-image: ghcr.io/ublue-os/bazzite-dx
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -37,81 +37,22 @@ modules:
         - tofik/nwg-shell
         - peterwu/rendezvous
         - deltragon/safeeyes
-    replace:
-      - from-repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
-        allow-erasing: true
-        packages:
-          - hyprland
-          - hyprutils
-          - hypridle
-          - hyprlock
     install:
       packages:
         - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
           packages:
-          - hyprsunset
+            - hyprsunset
+            - hyprland
+            - hyprutils
+            - hypridle
+            - hyprlock
   - type: dnf
-    install:
-      skip-unavailable: true
-      packages:
-        - gedit
-        - bolt
-        - bibata-cursor-themes
-        - fw-ectool
-        - micro
-        - curl
-        - gawk
-        - git
-        - grim
-        - gnome-polkit
-        - ImageMagick
-        - inxi
-        - jq
-        - kitty
-        - kvantum
-        - nano
-        - network-manager-applet
-        - openssl
-        - pamixer
-        - pavucontrol
-        - pipewire-alsa
-        - pipewire-utils
-        - playerctl
-        - python3-requests
-        - python3-pip
-        - python3-pyquery
-        - qt5ct
-        - qt6ct
-        - qt6-qtsvg
-        - rofi-wayland
-        - slurp
-        - swappy
-        - wget2
-        - wl-clipboard
-        - wlogout
-        - xdg-user-dirs
-        - xdg-utils
-        - yad
-        - cliphist
-        - nwg-look
-        - nwg-displays
-        - SwayNotificationCenter
-        - pamixer
-        - swww
-        - wallust 
-        - waydroid
-        - unzip
-        - tar
-        - gnome-keyring
-        - libsecret
-        - powertop
-        - tuned-utils
-        - safeeyes
     remove:
       packages:
         - firefox
         - firefox-langpacks 
         - kwallet
+        - @kde-desktop
     group-install:
       with-optional: true
       packages:
@@ -131,13 +72,11 @@ modules:
           - io.anytype.anytype # this one too
           - com.spotify.Client # gotta somehow figure out spicetify
           - io.github.celluloid_player.Celluloid # look videos!!
-          - com.unicornsonlsd.finamp
           - io.github.shiftey.Desktop
           - com.vscodium.codium
           - io.bassi.Amberol
           - me.iepure.devtoolbox
           - org.gnome.DejaDup
-          - com.nextcloud.desktopclient.nextcloud
           - org.easycoding.TunedSwitcher
   - type: systemd
     system:  
@@ -147,9 +86,5 @@ modules:
         - tailscaled.service
         - libvirtd.service
   - type: justfiles
-  - type: script
-    snippets:
-     - "chmod +x /usr/libexec/ublue-bling"
-     - "chmod +x /usr/share/ublue-os/spicetify.sh"
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
