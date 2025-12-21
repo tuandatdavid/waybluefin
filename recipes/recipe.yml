@@ -52,7 +52,7 @@ modules:
     remove:
       packages:
         - firefox
-        - firefox-langpacks 
+        - firefox-langpacks
         - kwallet
         - @kde-desktop
     group-install:
@@ -62,7 +62,7 @@ modules:
         - printing
   - type: default-flatpaks
     configurations:
-      - scope: system  
+      - scope: system
       - notify: true
         repo:
           url: https://dl.flathub.org/repo/flathub.flatpakrepo
