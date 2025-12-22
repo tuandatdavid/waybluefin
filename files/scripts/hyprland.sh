@@ -51,6 +51,7 @@ tools=(
     "btop"
     "python3-pip"
 )
+dnf5 groupremove "KDE Plasma Workspaces" 
 dnf5 copr enable --assumeyes solopasha/hyprland
 dnf5 copr enable --assumeyes peterwu/rendezvous
 dnf5 copr enable --assumeyes wef/cliphist
