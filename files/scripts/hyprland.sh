@@ -51,9 +51,9 @@ tools=(
     "btop"
     "python3-pip"
 )
-dnf copr enable --assumeyes solopasha/hyprland
-dnf copr enable --assumeyes peterwu/rendezvous
-dnf copr enable --assumeyes wef/cliphist
-dnf copr enable --assumeyes tofik/nwg-shell
-dnf copr enable --assumeyes erikreider/SwayNotificationCenter
-dnf install --assumeyes --skip-unavailable $general $hyprland $apps $tools
+dnf5 copr enable --assumeyes solopasha/hyprland
+dnf5 copr enable --assumeyes peterwu/rendezvous
+dnf5 copr enable --assumeyes wef/cliphist
+dnf5 copr enable --assumeyes tofik/nwg-shell
+dnf5 copr enable --assumeyes erikreider/SwayNotificationCenter
+dnf5 install --assumeyes --skip-unavailable $general $hyprland $apps $tools
