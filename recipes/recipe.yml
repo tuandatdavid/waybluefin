@@ -84,6 +84,10 @@ modules:
           - me.iepure.devtoolbox
           - org.gnome.DejaDup
           - org.easycoding.TunedSwitcher
+  - type: copy
+    from: ghcr.io/projectbluefin/common
+    src: /system_files
+    dest: /
   - type: systemd
     system:  
       enabled:
