@@ -6,7 +6,7 @@ name: waybluefin
 description: Wayblue with a bluefin touch
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-dx
+base-image: ghcr.io/ghcr.io/wayblueorg/wayblue
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -54,8 +54,6 @@ modules:
       packages:
         - firefox
         - firefox-langpacks
-        - kwallet
-        - kde
     group-install:
       with-optional: true
       packages:
