@@ -15,6 +15,7 @@ modules:
   - type: brew
     nofile-limits: true # increase nofile limits
     brew-analytics: false # disable telemetry
+    direct-pull: true
 #  - type: files
 #    files:
 #      - source: system
