@@ -16,9 +16,6 @@ modules:
     from: ghcr.io/ublue-os/brew:latest
     src: /system_files
     dest: /
-  - type: brew
-    nofile-limits: true # increase nofile limits
-    brew-analytics: false # disable telemetry
   - type: dnf
     install:
       packages:
