@@ -52,4 +52,4 @@ tools=(
     "python3-pip"
 )
 
-pacman -S --no-confirm $general $hyprland $apps $tools
+pacman -S --noconfirm $general $hyprland $apps $tools
