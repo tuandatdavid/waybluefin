@@ -10,94 +10,14 @@
 # fix-       = apply fix/patch/workaround for something
 # foo        = no verb is used for shortcuts or something deemed important enough to use a super memorable name
 
-# Run a one minute system benchmark
-[group('System')]
-benchmark:
-    #!/usr/bin/env bash
-    echo 'Running a 1 minute benchmark ...'
-    trap popd EXIT
-    pushd $(mktemp -d)
-    stress-ng --matrix 0 -t 1m --times
+spicetify:
+    #!/usr/bin/bash
+    cd /var/tmp
+    git clone https://github.com/boudywho/easy-spicetify-arch.git
+    cd easy-spicetify-arch
+    chmod +x spicetify.sh
+    ./spicetify.sh
 
-# Configure Bluefin-CLI Terminal Experience with Brew
-[group('System')]
-bluefin-cli:
-    @/usr/libexec/ublue-bling
-# Ptyxis terminal transparency
-[group('System')]
-ptyxis-transparency opacity="0.95":
-    #!/usr/bin/env bash
-    set -euxo pipefail
-    if [[ -n "$(echo "{{ opacity }}" | grep -v '^[.0-9]*$')" ]]; then
-        printf "Value must be numeric: %s.\n" "{{ opacity }}"
-    elif [[ $(echo "0<{{ opacity }} && 1>={{ opacity }}" | bc -q) -eq 1 ]]; then
-        raw="$(gsettings get org.gnome.Ptyxis profile-uuids)"
-        uuids="$(sed -En 's|[^0-9a-z]*||g; s|([0-9a-z]{32})|\1\n|gp' <<<${raw})"
-        for i in ${uuids}; do
-            location="org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles/${i}/"
-            gsettings set "${location}" opacity "{{ opacity }}"; done
-        printf "Ptyxis opacity is now %s.\n" "{{ opacity }}"
-    else
-        printf "Value must be greater than 0 and less than or equal to 1: %s.\n" "{{ opacity }}"
-    fi
-
-
-# Toggle tailscale
-[group('System')]
-toggle-tailscale:
-    #!/bin/bash
-    set -euo pipefail
-    source /usr/lib/ujust/ujust.sh
-    source /usr/lib/os-release
-
-    TAILSCALED_STATUS="$(systemctl is-enabled tailscaled || true )"
-
-    if [ "$TAILSCALED_STATUS" == "enabled" ] || [ "$TAILSCALED_STATUS" == "disabled" ]; then
-        TAILSCALED="Installed"
-    else
-        TAILSCALED="Not Found"
-        echo "${b}${red}Unable to enable or disable Tailscale.${n}"
-        echo "The tailscaled service must be present and either enabled or disabled to run this script."
-        echo "tailscaled service status: $TAILSCALED_STATUS"
-    fi
-
-
-    if [ "$TAILSCALED" == "Installed" ]; then
-        echo "Enable or disable Tailscale?"
-        TS_OPTION=$(Choose Enable Disable)
-
-        # gnome-extensions is only available on Bluefin (Gnome)
-        if [ "$VARIANT" == "Silverblue" ]; then
-            TAILSCALE_QS="$(gnome-extensions list | grep -q "tailscale@joaophi.github.com"; echo $?)"
-            if [ "$TAILSCALE_QS" == 0 ]; then
-                TAILSCALE_QS="Installed"
-            else
-                echo "The Tailscale QS extension for Gnome is not installed. Please install it and then run this script again."
-            fi
-
-            if [[ "${TS_OPTION,,}" =~ ^enable ]]; then
-                gnome-extensions enable tailscale@joaophi.github.com
-            elif [[ "${TS_OPTION,,}" =~ ^disable ]]; then
-                gnome-extensions disable tailscale@joaophi.github.com
-            fi
-        fi
-
-        if [ "$TS_OPTION" = "Enable" ]; then
-            systemctl enable --now tailscaled
-            TAILSCALED_STATUS="$(systemctl is-enabled tailscaled || true )"
-            if [ "$TAILSCALED_STATUS" == "enabled" ]; then
-                echo "${b}${green}Tailscale is enabled.${n}"
-                echo "If this is your first time using Tailscale, setup is necessary."
-                echo "Refer to Tailscale's documentation at https://tailscale.com/kb/1346/start."
-            fi
-        elif [ "$TS_OPTION" = "Disable" ]; then
-            systemctl disable --now tailscaled
-            TAILSCALED_STATUS="$(systemctl is-enabled tailscaled || true )"
-            if [ "$TAILSCALED_STATUS" == "disabled" ]; then
-                echo "${b}${red}Tailscale is disabled.${n}"
-            fi
-        fi
-    fi
 install-dots:
     #!/bin/bash
     # /* ---- 💫 https://github.com/tuandatdavid 💫 ---- */  #
@@ -245,9 +165,6 @@ install-dots:
     echo -e "${ERROR} Failed to download the latest source code release."
     exit 1
     fi
-install-spicetify:
-    #!/usr/bin/env bash
-    sh /usr/share/ublue-os/spicetify.sh
 install-gtk-theme:
     #!/usr/bin/env bash
     cd /var/tmp
