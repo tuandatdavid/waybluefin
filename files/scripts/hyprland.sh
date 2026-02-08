@@ -67,6 +67,6 @@ printf 'builduser ALL=(ALL) ALL\n' | tee -a /etc/sudoers # Allow the builduser p
 pacman --noconfirm -S base-devel git
 sudo -u builduser bash -c 'git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
 cd /tmp/yay-bin
-makepkg -si' # Clone and build a package
+makepkg -si --noconfirm' # Clone and build a package
 userdel -fr builduser
 yay -S --noconfirm $general $hyprland $apps $tools
