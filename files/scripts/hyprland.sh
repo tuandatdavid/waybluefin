@@ -58,6 +58,12 @@ tools=(
     "otf-font-awesome"
     "ttf-firacode-nerd"
     "ttf-jetbrains-mono-nerd"
+    "swww"
 )
+# install yay
+pacman --noconfirm -S base-devel git
+git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
+cd /tmp/yay-bin
+makepkg -si
 
-pacman -S --noconfirm $general $hyprland $apps $tools
+yay -S --noconfirm $general $hyprland $apps $tools
