@@ -69,4 +69,5 @@ sudo -u builduser bash -c 'git clone https://aur.archlinux.org/yay-bin.git /tmp/
 cd /tmp/yay-bin
 makepkg -si --noconfirm' # Clone and build a package
 userdel -fr builduser
-yay -S --noconfirm $general $hyprland $apps $tools
+pacman -S --needed --noconfirm "${general[@]}" "${hyprland[@]}" "${apps[@]}" "${tools[@]}"
+yay -S --noconfirm "${general[@]}" "${hyprland[@]}" "${apps[@]}" "${tools[@]}"
