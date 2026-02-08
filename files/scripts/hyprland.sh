@@ -54,7 +54,7 @@ tools=(
     "cliphist"
     "breeze"
     "btop"
-    "python3-pip"
+    "python-pip"
     "otf-font-awesome"
     "ttf-firacode-nerd"
     "ttf-jetbrains-mono-nerd"
