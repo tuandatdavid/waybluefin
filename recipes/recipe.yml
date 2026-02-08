@@ -30,13 +30,10 @@ modules:
         - hypridle
         - hyprlock
         - nwg-look
-        - iptables
-        - ebtables
         - archlinux-keyring
         - qemu-desktop
         - vde2
         - bridge-utils
-        - openbsd-netcat
   - type: script
     scripts:
       - hyprland.sh
