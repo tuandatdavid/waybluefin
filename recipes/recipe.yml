@@ -35,6 +35,7 @@ modules:
         - vde2
         - bridge-utils
         - libvirt
+        - just
   - type: script
     scripts:
       - hyprland.sh
@@ -57,7 +58,7 @@ modules:
           - io.bassi.Amberol
           - me.iepure.devtoolbox
           - org.gnome.DejaDup
-          - org.easycoding.TunedSwitcher
+          - com.ml4w.dotfilesinstaller
   - type: copy
     from: ghcr.io/projectbluefin/common
     src: /system_files
