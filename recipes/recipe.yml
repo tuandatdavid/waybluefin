@@ -62,6 +62,8 @@ modules:
           - me.iepure.devtoolbox
           - org.gnome.DejaDup
           - com.ml4w.dotfilesinstaller
+  - type: justfiles
+    validate: true
   - type: copy
     from: ghcr.io/projectbluefin/common
     src: /system_files
