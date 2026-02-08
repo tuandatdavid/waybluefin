@@ -61,9 +61,10 @@ tools=(
     "swww"
 )
 # install yay
+su -l nobody -c '
 pacman --noconfirm -S base-devel git
 git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
 cd /tmp/yay-bin
 makepkg -si
-
+'
 yay -S --noconfirm $general $hyprland $apps $tools
