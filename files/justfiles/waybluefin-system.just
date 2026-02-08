@@ -10,16 +10,8 @@
 # fix-       = apply fix/patch/workaround for something
 # foo        = no verb is used for shortcuts or something deemed important enough to use a super memorable name
 
-spicetify:
-    #!/usr/bin/bash
-    cd /var/tmp
-    git clone https://github.com/boudywho/easy-spicetify-arch.git
-    cd easy-spicetify-arch
-    chmod +x spicetify.sh
-    ./spicetify.sh
-
 install-dots:
-    #!/bin/bash
+    #!/usr/bin/bash
     # /* ---- 💫 https://github.com/tuandatdavid 💫 ---- */  #
     # For downloading dots from releases
 
@@ -165,6 +157,15 @@ install-dots:
     echo -e "${ERROR} Failed to download the latest source code release."
     exit 1
     fi
+
+spicetify:
+    #!/usr/bin/bash
+    cd /var/tmp
+    git clone https://github.com/boudywho/easy-spicetify-arch.git
+    cd easy-spicetify-arch
+    chmod +x spicetify.sh
+    ./spicetify.sh
+
 install-gtk-theme:
     #!/usr/bin/env bash
     cd /var/tmp
