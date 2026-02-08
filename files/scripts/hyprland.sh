@@ -51,10 +51,5 @@ tools=(
     "btop"
     "python3-pip"
 )
-dnf5 groupremove "KDE Plasma Workspaces" 
-dnf5 copr enable --assumeyes solopasha/hyprland
-dnf5 copr enable --assumeyes peterwu/rendezvous
-dnf5 copr enable --assumeyes wef/cliphist
-dnf5 copr enable --assumeyes tofik/nwg-shell
-dnf5 copr enable --assumeyes erikreider/SwayNotificationCenter
-dnf5 install --assumeyes --skip-unavailable $general $hyprland $apps $tools
+
+pacman -S --no-confirm $general $hyprland $apps $tools
