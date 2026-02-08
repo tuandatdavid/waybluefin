@@ -34,6 +34,7 @@ modules:
         - qemu-desktop
         - vde2
         - bridge-utils
+        - libvirt
   - type: script
     scripts:
       - hyprland.sh
