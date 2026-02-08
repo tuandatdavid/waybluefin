@@ -1,12 +1,12 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: waybluefin
+name: waybluefin-arch
 # description will be included in the image's metadata
 description: Wayblue with a bluefin touch
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ghcr.io/wayblueorg/hyprland
+base-image: ghcr.io/tuandatdavid/arch-main
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -16,44 +16,28 @@ modules:
     from: ghcr.io/ublue-os/brew:latest
     src: /system_files
     dest: /
-  - type: dnf
+  - type: pacman
     install:
       packages:
         - libspng
         - tomlplusplus
-  - type: dnf
-    repos:
-      copr:
-        - solopasha/hyprland
-        - erikreider/SwayNotificationCenter
-        - errornointernet/packages
-        - rowanfr/fw-ectool
-        - tofik/nwg-shell
-        - peterwu/rendezvous
-        - deltragon/safeeyes
+  - type: pacman
     install:
       packages:
-        - repo: copr:copr.fedorainfracloud.org:solopasha:hyprland
-          packages:
-            - hyprsunset
-            - hyprland
-            - hyprutils
-            - hypridle
-            - hyprlock
-  - type: dnf
-    install:
-      packages:
-        - cowsay
+        - hyprsunset
+        - hyprland
+        - hyprutils
+        - hypridle
+        - hyprlock
         - nwg-look
-    remove:
-      packages:
-        - firefox
-        - firefox-langpacks
-    group-install:
-      with-optional: true
-      packages:
-        - virtualization
-        - printing
+        - iptables
+        - ebtables
+        - archlinux-keyring
+        - qemu 
+        - vde2
+        - bridge-utils
+        - openbsd-netcat
+        - dmidecod
   - type: script
     scripts:
       - hyprland.sh
@@ -69,7 +53,7 @@ modules:
           - net.nokyan.Resources # this Flatpak is appended to the install list
           - app.zen_browser.zen # this one too
           - io.anytype.anytype # this one too
-          - com.spotify.Client # gotta somehow figure out spicetify
+          - com.spotify.Client
           - io.github.celluloid_player.Celluloid # look videos!!
           - io.github.shiftey.Desktop
           - com.vscodium.codium
@@ -84,8 +68,6 @@ modules:
   - type: systemd
     system:  
       enabled:
-        - spotpermfix.service
-        - podman.socket
         - libvirtd.service
         - brew-setup.service
         - brew-update.timer
