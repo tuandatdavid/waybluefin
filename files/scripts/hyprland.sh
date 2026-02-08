@@ -60,7 +60,6 @@ tools=(
     "ttf-firacode-nerd"
     "ttf-jetbrains-mono-nerd"
     "swww"
-    "bibata-cursor-themes"
     "bolt"
 )
 # install yay
