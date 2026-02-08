@@ -37,6 +37,7 @@ apps=(
     "blueman"
     "qt6ct"
     "nautilus"
+    "rofi-wayland"
 )
 
 tools=(
@@ -59,6 +60,8 @@ tools=(
     "ttf-firacode-nerd"
     "ttf-jetbrains-mono-nerd"
     "swww"
+    "bibata-cursor-themes"
+    "bolt"
 )
 # install yay
 useradd builduser -m # Create the builduser
