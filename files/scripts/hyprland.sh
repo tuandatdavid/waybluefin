@@ -60,9 +60,7 @@ tool=(
     "ttf-firacode-nerd"
     "ttf-jetbrains-mono-nerd"
     "swww"
-    "bolt"
-    hypr_package=( 
-  #aylurs-gtk-shell
+    "bolt" 
     "bc"
     "cliphist"
     "curl" 
