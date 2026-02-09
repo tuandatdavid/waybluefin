@@ -49,6 +49,7 @@ general=(
     "vim"
     "inotify-tools"
     "gnome-themes-extra"
+    "waybar"
 )
 
 hyprland=(
