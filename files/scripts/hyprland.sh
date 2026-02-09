@@ -30,7 +30,7 @@ apps=(
     "wlogout"
     "nwg-dock-hyprland"
     "waybar"
-    "rofi-wayland"
+    "rofi"
     "nwg-look"
     "pavucontrol"
     "neovim"
@@ -40,7 +40,7 @@ apps=(
     "rofi-wayland"
 )
 
-tools=(
+tool=(
     "xdg-user-dirs"    
     "xdg-desktop-portal-gtk"
     "polkit-gnome"
@@ -61,6 +61,37 @@ tools=(
     "ttf-jetbrains-mono-nerd"
     "swww"
     "bolt"
+    hypr_package=( 
+  #aylurs-gtk-shell
+    "bc"
+    "cliphist"
+    "curl" 
+    "grim" 
+    "gvfs" 
+    "gvfs-mtp"
+    "hyprpolkitagent"
+    "imagemagick"
+    "inxi"
+    "jq"
+    "kvantum"
+    "network-manager-applet" 
+    "pamixer"
+    "pavucontrol"
+    "playerctl"
+    "python-requests"
+    "python-pyquery"
+    "qt6-svg"
+    "slurp" 
+    "swappy" 
+    "swaync" 
+    "swww"
+    "unzip" # needed later
+    "wallust" 
+    "wl-clipboard"
+    "wlogout"
+    "xdg-user-dirs"
+    "xdg-utils"
+    "yad"
 )
 # install yay
 useradd builduser -m # Create the builduser
@@ -71,5 +102,5 @@ sudo -u builduser bash -c 'git clone https://aur.archlinux.org/yay-bin.git /tmp/
 cd /tmp/yay-bin
 makepkg -si --noconfirm' # Clone and build a package
 userdel -fr builduser
-pacman -S --needed --noconfirm "${general[@]}" "${hyprland[@]}" "${apps[@]}" "${tools[@]}"
-yay -S --noconfirm "${general[@]}" "${hyprland[@]}" "${apps[@]}" "${tools[@]}"
+pacman -S --needed --noconfirm "${general[@]}" "${hyprland[@]}" "${apps[@]}" "${tool[@]}"
+yay -S --noconfirm "${general[@]}" "${hyprland[@]}" "${apps[@]}" "${tool[@]}"
