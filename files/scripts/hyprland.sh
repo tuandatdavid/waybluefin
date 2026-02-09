@@ -27,7 +27,6 @@ general=(
     "swaync"
     # Tools
     "eza"
-    "python-pywalfox"
     "tesseract-data-eng"
     # Fonts
     "otf-font-awesome"
