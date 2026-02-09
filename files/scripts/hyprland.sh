@@ -18,6 +18,7 @@ general=(
     "network-manager-applet"
     "imagemagick"
     "polkit-gnome"
+    "gnome-keyring"
     "hyprshade"
     "grimblast-git"
     "pacman-contrib"
@@ -50,6 +51,7 @@ general=(
     "inotify-tools"
     "gnome-themes-extra"
     "waybar"
+    "adw-gtk-theme"
 )
 
 hyprland=(
