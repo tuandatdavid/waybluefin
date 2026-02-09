@@ -92,7 +92,6 @@ tool=(
     "breeze"
     "tesseract"
     "wl-clipboard"
-    "btop"
 )
 # install yay
 useradd builduser -m # Create the builduser
@@ -102,6 +101,6 @@ pacman --noconfirm -S base-devel git
 sudo -u builduser bash -c 'git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
 cd /tmp/yay-bin
 makepkg -si --noconfirm' # Clone and build a package
-userdel -fr builduser
+userdel builduser
 pacman -S --needed --noconfirm "${general[@]}" "${hyprland[@]}" "${apps[@]}" "${tool[@]}"
 yay -S --noconfirm "${general[@]}" "${hyprland[@]}" "${apps[@]}" "${tool[@]}"
